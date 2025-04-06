@@ -10,10 +10,12 @@
 	7. [The McGonagall's award](#17-the-mcgonagalls-award)
 
 
-> [!IMPORTANT] Disclaimer: AI tools assistance
+> [!IMPORTANT]
+> **Disclaimer: AI tools assistance**
 > Some problems were solved with the help of AI tools.
 
-> [!WARNING] Warning: unreviewed document
+> [!WARNING]
+> **Warning: unreviewed document**
 >  The following exercises have not been reviewed by expert humans; be aware their solutions can contain mistakes.
 
 ## 1. Written problems
@@ -29,9 +31,7 @@ You are tracking the distance to the Hogwarts Express. A magical instrument repo
 2. **Answer**:  $\mathcal{P}(d=100|t)\sim\mathcal{N}(\mu=100,\sigma^2=4)$ $=\frac{1}{\sqrt{ 8\pi }}\exp\left( -\frac{(100-t)^2}{8} \right)$
    The true distance $t$ is a measurement that can be though as the result of estimating the mean of the underlying, true distribution, and then applying a perturbation modelled as stated in the problem description, i.e. a normal distribution $\mathcal{N}=(\mu=0,\sigma^2=4)$. Using the properties of the normal distributions, we can respectively sum their mean and variances in order to model a new, normal distribution which account for the true distance plus the noise density estimation. In other words, we know that $\mathcal{T}(d)=\mathcal{N}(\mu=t,\sigma^2=0)$ -that is, a normal distribution of mean equal to $t$ and with no variance, to account for "the true value $t$" condition-, while the noise has density $\epsilon(d)=\mathcal{N}(\mu=d,\sigma^2=4)$. Summing them up, we obtain the density of every possible measurement $\mathcal{M}(d)\sim$ $\mathcal{T}(d)+\epsilon(d)\sim$ $\mathcal{N}(\mu=t, \sigma^2=0+4=4)$. In particular, in this case the distance $d=100$, hence we can finally compute the final solution: $\mathcal{M(d=100)}\sim\mathcal{N}(\mu=100,\sigma^2=4)$ $=\frac{1}{\sqrt{ 8\pi }}\exp\left( -\frac{(100-t)^2}{8} \right)$.
 3. **Answer**: $\mathcal{P}(t|d) = \frac{\mathcal{P}(d=100|t)\mathcal{P(d=100)}}{\mathcal{P(t)}}$
-   We want to calculate the posterior $R(d)$ after the reading $d=100$, given that the true distance is $t$. In notation, we want to calculate $\mathcal{P}(d|t)$, and this can be accomplished using the Bayes' theorem: $\mathcal{P}(t|d)=\frac{\mathcal{P}(d|t)\mathcal{P}(d)}{\mathcal{P(t)}}$. We have already calculated all the components of the numerator, since in the first exercise we have calculated $P(d)$, while in the second one we estimated $P(d=100|t)$, where $d=100$ is our measurement. In this case the true distribution $\mathcal{P}(t)$ is not given, but we can leave it just indicated and finally solve in a symbolic way the whole exercise: 
-   $$\begin{align*}\mathcal{P}(t|d) &= \frac{\mathcal{P}(d=100|t)\mathcal{P(d=100)}}{\mathcal{P(t)}}\\&= \frac{1}{\sqrt{ 8\pi }}\exp\left( -\frac{(100-t)^{2}}{8} \right)\cdot \frac{1}{\sqrt{ 32\pi }}\exp\left( -\frac{(100-98)^2}{32} \right)\cdot \mathcal{P}(t)^{-1}
-\end{align*}$$
+   We want to calculate the posterior $R(d)$ after the reading $d=100$, given that the true distance is $t$. In notation, we want to calculate $\mathcal{P}(d|t)$, and this can be accomplished using the Bayes' theorem: $\mathcal{P}(t|d)=\frac{\mathcal{P}(d|t)\mathcal{P}(d)}{\mathcal{P(t)}}$. We have already calculated all the components of the numerator, since in the first exercise we have calculated $P(d)$, while in the second one we estimated $P(d=100|t)$, where $d=100$ is our measurement. In this case the true distribution $\mathcal{P}(t)$ is not given, but we can leave it just indicated and finally solve in a symbolic way the whole exercise: $$\begin{aligned}\mathcal{P}(t|d) &= \frac{\mathcal{P}(d=100|t)\mathcal{P(d=100)}}{\mathcal{P(t)}}\\&= \frac{1}{\sqrt{ 8\pi }}\exp\left( -\frac{(100-t)^{2}}{8} \right)\cdot \frac{1}{\sqrt{ 32\pi }}\exp\left( -\frac{(100-98)^2}{32} \right)\cdot \mathcal{P}(t)^{-1}\end{aligned}$$
 
 ### 1.2. The Owlery conundrum
 On average, $5.5$ owls arrive at the Owlery per minute. What is the probability that:
@@ -42,32 +42,32 @@ On average, $5.5$ owls arrive at the Owlery per minute. What is the probability 
 **Solutions**
 1. **Answer**: $\mathcal{Poi(\lambda=5.5, x>7)} = 1- \sum^{7}_{i=0}\frac{e^{-7}7^i}{i!}$
    The problem can be solved by the means of a Poisson distribution estimation:  we want to calculate $\mathcal{Poi}(\lambda=5.5,x>7)$. In order to achieve this, we can compute the inverse of a finite sum to find the final solution to the problem: 
-   $$\begin{align*}
+   $$\begin{aligned}
    \mathcal{Poi(\lambda=5.5, x>7)} &= \\
    &=1-\mathcal{Poi}\left(\lambda=5.5, x\leq 7 \right) \\
    &=1-\sum^{7}_{i=0}\mathcal{Poi(\lambda=5.5,x=i)} \\
    &= 1- \sum^{7}_{i=0}\frac{e^{-\lambda}\lambda^i}{i!} \\
    &= 1- \sum^{7}_{i=0}\frac{e^{-7}7^i}{i!}
-   \end{align*}$$
+   \end{aligned}$$
 2. **Answer**: $\mathcal{Poi}(\lambda=11,x>13)=$ $1 - \sum^{13}_{i=0} \frac{e^{-11}11^i}{i!}$
-   The solution to this problem is similar to that of the previous one, but we have to adjust for 1. $x>13$ and 2. the timeframe is not $1$ minute, but $2$. To achieve the second condition, we have to choices: multiply the final probability by 2, or double the average $\lambda=5.5 \to \lambda \cdot 2= 11$; the answer will not vary, so we choose the latter way in order to tide up a bit the whole notation. The following is the final solution: $$\begin{align*}
+   The solution to this problem is similar to that of the previous one, but we have to adjust for 1. $x>13$ and 2. the timeframe is not $1$ minute, but $2$. To achieve the second condition, we have to choices: multiply the final probability by 2, or double the average $\lambda=5.5 \to \lambda \cdot 2= 11$; the answer will not vary, so we choose the latter way in order to tide up a bit the whole notation. The following is the final solution: $$\begin{aligned}
 	\mathcal{Poi}(\lambda=11,x>13) &= \\
 		&= 1 - \mathcal{Poi}(\lambda=11,x \leq 13) \\
 		&= 1 - \sum^{13}_{i=0} \mathcal{Poi}(\lambda=11, x=i) \\
 		&= 1 - \sum^{13}_{i=0} \frac{e^{-\lambda}\lambda^{i}}{i!} \\
 		&= 1 - \sum^{13}_{i=0} \frac{e^{-11}11^i}{i!} \\
 		
-\end{align*}$$
+\end{aligned}$$
 3. **Answer**: $\mathcal{Poi}(\lambda=16.5,x>15)=$ $1 - \sum^{15}_{i=0} \frac{e^{-16.5}16.5^i}{i!}$
    The solution can be calculated exactly like in the previous exercise:
    $$
-   \begin{align*}
+   \begin{aligned}
 	\mathcal{Poi}(\lambda=16.5,x>15) &= \\
 		&= 1 - \mathcal{Poi}(\lambda=16.5,x\leq 15) \\
 			&= 1 - \sum^{15}_{i=0}\mathcal{Poi}(\lambda=16.5,x=i) \\
 			&= 1 - \sum^{15}_{i=0} \frac{e^{-\lambda}\lambda^{i}}{i!} \\
 			&=1 - \sum^{15}_{i=0} \frac{e^{-16.5}16.5^i}{i!}
-\end{align*}$$
+\end{aligned}$$
 
 ### 1.3. The gnomic uplifting
 The median $m$ of a continuous random variable $X$ (like the height of a gnome) having cumulative distribution function $\mathcal{F}$ is the value $m$ such that $\mathcal{F}(m) = 0.5$. Find the median of $X$ in terms of distribution parameters) if:
@@ -95,17 +95,17 @@ Let $X_i$ be the number of students visiting the Hogwarts library in week $i$, w
 1. **Answer**: $\mathbb{P}(X_{i}+X_{i+1}> 5000)$
    $= \sum_{i=0}^{5000}\frac{1}{\sqrt{ 211600\pi }}\exp\left( -\frac{(i-4400)^2}{211600} \right)$ $=1-\Phi\left( \frac{5000-4400}{\sqrt{ 105800 }} \right)$
    We want to calculate the probability $\mathbb{P}(X_{i}+X_{i+1}< 5000)$, where $X_{i},X_{i+1}\sim \mathcal{N}(2200,52900)$, and are two independent random variables. First, we can state that $\mathbb{P}(X_{i}+X_{i+1}>5000) = 1 - \mathbb{P}(X_{i}+X_{i+1}\leq 5000)$. The sum of independent normally distributed variables is also a normal distribution, with the mean equal to the sum of the singular means, and variance equal to the sum of the standalone variances. This translates into the following: $$X_i+X_{i+1} \sim \mathcal{N}(\mu=4400, \sigma^2=105800)$$
-   The answer to the problem is then just a sum of density estimates, like shown below: $$\begin{align*}
+   The answer to the problem is then just a sum of density estimates, like shown below: $$\begin{aligned}
 \mathbb{P}(X_{i}+X_{i+1}> 5000) &= \\
 &= 1-\mathbb{P}(X_{i}+X_{i+1}\leq 5000) \\
 &= 1-\sum^{5000}_{i=0} \mathcal{N}(x=i; \mu=4400, \sigma^{2}=105800)\\
 &= 1-\sum_{i=0}^{5000} \frac{1}{\sqrt{ 2\pi \sigma^2 }}\exp\left( -\frac{(i-\mu)^2}{2\sigma^2} \right)\\
 &= 1-\sum_{i=0}^{5000}\frac{1}{\sqrt{ 211600\pi }}\exp\left( -\frac{(i-4400)^2}{211600} \right)
-\end{align*}$$
+\end{aligned}$$
 The same solution can be derived using the CDF of a normal distribution, simplifying a bit the overall notation: $$\mathbb{P}(X_{i}+X_{i+1}>5000)=1 - \Phi\left(\frac{5000-\mu}{\sigma} \right)=1-\Phi\left( \frac{5000-4400}{\sqrt{ 105800 }} \right)$$
 2. **Answer**: ${3 \choose 2} \alpha^{2}(1-\alpha)^1+ {3 \choose 3}\alpha^{3}(1-a)^{0}$, with $\alpha = 1-\Phi\left( \frac{2000-4400}{\sqrt{ 105800 }} \right)$
    Suppose we already know the probability of having a week where the number of visitors exceeds 2000, i.e. $\alpha=\mathbb{P}(X_{i}>2000)$; since we want to calculate the probability that the same happens in two out of three weeks, we can model the situation using a binomial distribution. In practice, let's call $W$ a variable having values in $\{0,1,2,3\}$, indicating the numbers of weeks where the 2000 visitors threshold has been exceeded. As already stated, $W \sim Bin(n,k)$, with $k \in \{0,1,2,3\}$ and $n=3$. We are interested in calculating $\mathbb{P}(W\geq 2)=\mathbb{P}(W=2)+\mathbb{P}(W=3)$ given the probability measure $\alpha$ we have already assumed to have. Of course, this is not the case, so let's calculate such probability using the same technique adopted in the preceding problem: $$
-   \begin{align*}
+   \begin{aligned}
 \alpha = \mathbb{P}(X_{i}>2000) &= \\
 &= 1 - \mathbb{P}(X_{i}\leq 2000) \\
 &= 1 - \sum_{i=0}^{2000} \mathcal{N}(x=i; \mu=2200; \sigma^{2=52900)}\\
@@ -113,7 +113,7 @@ The same solution can be derived using the CDF of a normal distribution, simplif
 &= 1 - \sum_{i=1}^{2000} \frac{1}{\sqrt{ 21600\pi }}\exp\left( -\frac{(i-4400)^2}{211600} \right)\\
 &=1 - \Phi\left(\frac{2000-\mu}{\sigma} \right)\\
 &=1-\Phi\left( \frac{2000-4400}{\sqrt{ 105800 }} \right)
-\end{align*}$$
+\end{aligned}$$
 Wrapping everything together using the binomial modelling explained above, the wanted probability is the following: $$\mathbb{P}(W\geq 2) ={3 \choose 2} \alpha^{2}(1-\alpha)^1+ {3 \choose 3}\alpha^{3}(1-a)^{0}$$
 ### 1.5. The Witchcraft houses levelling
 Let $X,Y$ and $Z$ be independent random variables representing the magical power levels of three Hogwarts students, where $X \sim \mathcal{N}(\mu_1,\sigma^2_{1})$ (Gryffindor), $Y \sim \mathcal{N}(\mu_2,\sigma^2_{2})$ (Hufflepuff), and $Z \sim \mathcal{N}(\mu_{3}, \sigma^2_{3})$ (Ravenclaw).
@@ -125,15 +125,15 @@ Let $X,Y$ and $Z$ be independent random variables representing the magical power
 1. **Answer**: $A=X+Y \implies A \sim \mathcal{N}(\mu_{1}+\mu_{2},\sigma^2_{1}+\sigma^2_{2})$
    The answer is pretty straightforward, since the sum of two normal distribution is still a normal distribution on mean equal to the sum of single means, and variance equal to the sum of single variances: $$A=X+Y \implies A \sim \mathcal{N}(\mu_{1}+\mu_{2},\sigma^2_{1}+\sigma^2_{2})$$
 2. **Answer**: $B \sim \mathcal{N}(5\mu_{1}+2,\ 25\sigma^2_{1})$
-   Both the mean and the variance are linear maps, and we can use their properties to derive the form of B, that of course will still be a normal distribution. $$\begin{align*}\mathbb{E}[B]&=\mathbb{E}[X+5]=5\mathbb{E}[X]+2 \\ &= 5\mu_{1}+2\\ Var(B)&=Var(5X+2)=5^{2}Var(X)=25Var(X)\\&=25\sigma^2_{1}\end{align*}$$
+   Both the mean and the variance are linear maps, and we can use their properties to derive the form of B, that of course will still be a normal distribution. $$\begin{aligned}\mathbb{E}[B]&=\mathbb{E}[X+5]=5\mathbb{E}[X]+2 \\ &= 5\mu_{1}+2\\ Var(B)&=Var(5X+2)=5^{2}Var(X)=25Var(X)\\&=25\sigma^2_{1}\end{aligned}$$
    The conclusive answer follows immediately: $$B \sim \mathcal{N}(5\mu_{1}+2,\ 25\sigma^2_{1})$$
 3. **Answer**: $C \sim \mathcal{N}(a\mu_{1}-b\mu_{2}+c^{2}\mu_{3},\ a^2\sigma_{1}^2+b^2\sigma^2_{2}+c^4\sigma^2_{3} )$
-   The answer can be calculated exactly like in the previous exercise, like just a little bit more of effort in computations. $$\begin{align*}
+   The answer can be calculated exactly like in the previous exercise, like just a little bit more of effort in computations. $$\begin{aligned}
 \mathbb{E}[C]&=\mathbb{E}[aX-bY+c^2Z]=a\mathbb{E}[X]-b\mathbb{E}[Y]+c^{2}\mathbb{E}[Z]\\
 &= a\mu_{1}-b\mu_{2}+c^{2}\mu_{3}\\
 Var(C) &= Var(aX-bY+c^2Z)=a^2Var(X)+b^2Var(Y)+c^4Var(Z)\\
 &=a^2\sigma_{1}^2+b^2\sigma^2_{2}+c^4\sigma^2_{3}
-\end{align*}$$The answer is then: $$C \sim \mathcal{N}(a\mu_{1}-b\mu_{2}+c^{2}\mu_{3},\ a^2\sigma_{1}^2+b^2\sigma^2_{2}+c^4\sigma^2_{3} )$$
+\end{aligned}$$The answer is then: $$C \sim \mathcal{N}(a\mu_{1}-b\mu_{2}+c^{2}\mu_{3},\ a^2\sigma_{1}^2+b^2\sigma^2_{2}+c^4\sigma^2_{3} )$$
    
 
 ### 1.6. Magic and marginal densities
@@ -194,4 +194,4 @@ Choose a number $X$ at random from the set of house points $\{1,2,3,4,5,6\}$ awa
 \end{cases}$$
 3. **Answer**: No, $X$ and $Y$ are not independent.
    In order to solve the problem we must check if the joint distribution is equal to the product of the marginal ones. $$\mathbb{P}(X=x,Y=y)=\frac{1}{6x}\stackrel{?}{=}{\frac{1}{6}\sum_{y=x}^{6} \frac{1}{6y}}=\mathbb{P}(X=x)\mathbb{P}(Y=y)$$
-   We can clearly see that the equality does not hold; for example, with $x=5$ and $y=6$, with have $\frac{1}{30} = \frac{1}{30}+\frac{1}{36}$, which is of course false.
+   We can clearly see that the equality does not hold; for example, with $x=5$ and $y=6$, we have $\frac{1}{30} = \frac{1}{30}+\frac{1}{36}$, which is of course false.
