@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "case_name": "The Midnight Mystery",
+    "victim": "Lady Mustard",
+    "murder_time": "11:50pm",
+    "victim_note": "Ye cannae hide forever behind yer mask of respectability. I ken aboot the debts, the gambling, the desperate measures ye took tae maintain yer position. The banker telt me everythin' afore he died - yes, I ken aboot that too. Hoo many mair secrets are ye hiding? Hoo many mair fowk hae ye hurt? I am giving ye one final chance tae come clean. Meet me at the appointed hour and bring the account books. We will find a way throo this mess, but only if ye stop lying. The truth, however painful, is our only salvation.",
+    "detective": "Sherlock Holmes",
+    "assistant": "Dr. Watson",
+    "total_guests": 20,
+    "interrogated": 19,
+    "locations": [
+      "library",
+      "ballroom",
+      "conservatory",
+      "billiard room",
+      "study",
+      "hall",
+      "lounge",
+      "dining room",
+      "kitchen",
+      "cellar",
+      "attic",
+      "garden",
+      "terrace",
+      "smoking room",
+      "gallery"
+    ]
+  },
+  "interrogations": [
+    {
+      "guest": "Sir Gray",
+      "statement": "At that time, I was in the hall. I often go there in the evenings for admiring the artwork. It's become quite a routine for me. I saw several people actually - Ambassador Azure, Ambassador Black, General Brown, Admiral Mustard, Colonel Coral and General Azure. Everyone seemed to be going about their usual business. I was terrified when I heard about what happened. I'm afraid I can't help you with any note. I didn't write one, didn't receive one, and didn't see one.",
+      "timestamp": "Interview conducted at 1:36am"
+    },
+    {
+      "guest": "Madame Peacock",
+      "statement": "Well, I can tell you exactly where I was - in the smoking room, listening to music. I remember because I was there from about 11:30pm until well after midnight. I noticed Ambassador Green was there too. They didn't stay long, just passed through. I couldn't process it when I heard about what happened. I don't know anything about a note. This is the first I'm hearing of it, and I can assure you I had nothing to do with it.",
+      "timestamp": "Interview conducted at 6:55am"
+    },
+    {
+      "guest": "Lady Pearl",
+      "statement": "I wus definitely in the hall aroond 11:50pm. I wus playing cards and trying tae relax efter the day's events. No, I dinnae recall seeing anyone. The room wus rather dim and I wus focused on ma ain activities. I couldnae understand why fer whan I heard aboot whit happened. A note? I hae naw idea whit you're talking about. I didnae write anything, and nobody gave me any note either.",
+      "timestamp": "Interview conducted at 4:24am"
+    },
+    {
+      "guest": "Ambassador Green",
+      "statement": "Well, I can tell ye exactly whaur I wis - in the cellar, enjoying the evening. I remember because I wis thair frae aboot 11:30pm until weel efter midnight. Thair were a few others around. I seen Madame Crimson and Madame Amber. We dinnae right interact much. I wis confused whan I heard aboot whit happened. I dinnae ken anythin' aboot a note. This is the first I'm hearing of it, and I can assure ye I had nothin' tae do wi' it.",
+      "timestamp": "Interview conducted at 2:51am"
+    },
+    {
+      "guest": "General Azure",
+      "statement": "I was definitely in the study just before midnight. I was smoking a pipe and trying to relax after the day's events. There were a few others around. I saw Miss Onyx, Mister Coral, Major Plum, Doctor Black, Sir Peacock, Professor Mustard and Ambassador Azure. We didn't really interact much. I couldn't believe it when I heard about what happened. I don't know anything about a note. This is the first I'm hearing of it, and I can assure you I had nothing to do with it.",
+      "timestamp": "Interview conducted at 6:43am"
+    },
+    {
+      "guest": "Professor Mustard",
+      "statement": "You know, I was just resting quietly in the terrace just before midnight. I always spend my evenings there, it's my favorite spot in the house. I saw several people actually - Doctor Black, Sir Peacock, Miss Onyx, General Azure, Mister Coral, Admiral Mustard and General Brown. Everyone seemed to be going about their usual business. I couldn't process it when I heard about what happened. That note wasn't mine, I can tell you that with certainty. I don't know who wrote it or why.",
+      "timestamp": "Interview conducted at 2:39am"
+    },
+    {
+      "guest": "Doctor Black",
+      "statement": "At that time, I was in the library. I often go there in the evenings for listening to music. It's become quite a routine for me. I remember seeing Sir Peacock, Miss Onyx, Major Plum, Madame Crimson, Mister Coral, General Azure and Madame Amber at various times. People were coming and going all evening. I couldn't process it when I heard about what happened. That note wasn't mine, I can tell you that with certainty. I don't know who wrote it or why.",
+      "timestamp": "Interview conducted at 5:56am"
+    },
+    {
+      "guest": "Madame Amber",
+      "statement": "I was definitely in the garden when the clock struck twelve. I was taking a walk and trying to relax after the day's events. There were a few others around. I saw Sir Gray, Ambassador Black, Ambassador Azure, Admiral Mustard, General Brown, Duchess Silver, Miss Onyx and Major Plum. We didn't really interact much. I couldn't process it when I heard about what happened. That note wasn't mine, I can tell you that with certainty. I don't know who wrote it or why.",
+      "timestamp": "Interview conducted at 4:26am"
+    },
+    {
+      "guest": "Admiral Mustard",
+      "statement": "At that time, I was in the dining room. I often go there in the evenings for enjoying the evening. It's become quite a routine for me. Yes, I noticed Duchess Silver, Colonel Coral, General Brown, Madame Amber, Sir Gray, Ambassador Azure, General Azure, Miss Onyx and Lady Pearl were about. It wasn't unusual to see them there. I couldn't understand why when I heard about what happened. I don't know anything about a note. This is the first I'm hearing of it, and I can assure you I had nothing to do with it.",
+      "timestamp": "Interview conducted at 3:38am"
+    },
+    {
+      "guest": "Ambassador Black",
+      "statement": "You know, I was just having a drink in the kitchen right at 11:50pm. I always spend my evenings there, it's my favorite spot in the house. I remember seeing Duchess Silver, Admiral Mustard, Madame Amber, Sir Gray, Ambassador Azure, Colonel Coral and Major Plum at various times. People were coming and going all evening. I couldn't understand why when I heard about what happened. A note? I have no idea what you're talking about. I didn't write anything, and nobody gave me any note either.",
+      "timestamp": "Interview conducted at 3:44am"
+    },
+    {
+      "guest": "Ambassador Azure",
+      "statement": "You know, I was just having a drink in the ballroom around 11:50pm. I always spend my evenings there, it's my favorite spot in the house. Yes, I noticed Colonel Coral, Ambassador Black, General Brown, Madame Amber, Duchess Silver and Mister Coral were about. It wasn't unusual to see them there. I didn't know what to think when I heard about what happened. I don't know anything about a note. This is the first I'm hearing of it, and I can assure you I had nothing to do with it.",
+      "timestamp": "Interview conducted at 6:23am"
+    },
+    {
+      "guest": "Madame Crimson",
+      "statement": "Well, I can tell you exactly where I was - in the gallery, having a drink. I remember because I was there from about 11:30pm until well after midnight. Yes, I noticed Mister Coral, Doctor Black, Miss Onyx, Major Plum, Professor Mustard, Sir Peacock and Ambassador Black were about. It wasn't unusual to see them there. I didn't expect this when I heard about what happened. That note wasn't mine, I can tell you that with certainty. I don't know who wrote it or why.",
+      "timestamp": "Interview conducted at 1:23am"
+    },
+    {
+      "guest": "General Brown",
+      "statement": "At that time, I wis in the lounge. I often go thair in the evenings fer admiring the artwork. It's become gey a routine fer me. Yes, I noticed Sir Gray, Duchess Silver, Colonel Coral, Madame Amber, Ambassador Azure, Admiral Mustard, Professor Mustard and Miss Onyx were about. It wasnae unusual tae see them there. I wis gey shocked whan I heard aboot whit happened. That note wasnae mine, I can tell ye that wi' certainty. I dinnae ken who wrote it or why.",
+      "timestamp": "Interview conducted at 3:10am"
+    },
+    {
+      "guest": "Colonel Coral",
+      "statement": "I was definitely in the ballroom when the clock struck twelve. I was admiring the artwork and trying to relax after the day's events. I remember seeing Ambassador Azure, Duchess Silver, Ambassador Black, Madame Amber, General Brown, Madame Crimson and General Azure at various times. People were coming and going all evening. I couldn't believe it when I heard about what happened. That note wasn't mine, I can tell you that with certainty. I don't know who wrote it or why.",
+      "timestamp": "Interview conducted at 6:19am"
+    },
+    {
+      "guest": "Miss Onyx",
+      "statement": "Well, I can tell you exactly where I was - in the kitchen, admiring the artwork. I remember because I was there from about 11:30pm until well after midnight. Yes, I noticed Mister Coral, General Azure, Major Plum, Sir Peacock, Professor Mustard, Doctor Black, Madame Amber and Duchess Silver were about. It wasn't unusual to see them there. I couldn't process it when I heard about what happened. That note wasn't mine, I can tell you that with certainty. I don't know who wrote it or why.",
+      "timestamp": "Interview conducted at 4:56am"
+    },
+    {
+      "guest": "Duchess Silver",
+      "statement": "You know, I was just discussing business in the study at 11:50pm exactly. I always spend my evenings there, it's my favorite spot in the house. I saw several people actually - Ambassador Black, Madame Amber, Sir Gray, Colonel Coral, Admiral Mustard and General Azure. Everyone seemed to be going about their usual business. I was confused when I heard about what happened. A note? I have no idea what you're talking about. I didn't write anything, and nobody gave me any note either.",
+      "timestamp": "Interview conducted at 4:25am"
+    },
+    {
+      "guest": "Sir Peacock",
+      "statement": "Well, I can tell you exactly where I was - in the smoking room, resting quietly. I remember because I was there from about 11:30pm until well after midnight. I saw several people actually - Madame Crimson, Major Plum, Professor Mustard, Mister Coral, General Azure and Sir Gray. Everyone seemed to be going about their usual business. I didn't expect this when I heard about what happened. That note wasn't mine, I can tell you that with certainty. I don't know who wrote it or why.",
+      "timestamp": "Interview conducted at 3:21am"
+    },
+    {
+      "guest": "Mister Coral",
+      "statement": "Well, I can tell you exactly where I was - in the attic, resting quietly. I remember because I was there from about 11:30pm until well after midnight. I remember seeing Madame Crimson, Sir Peacock, Miss Onyx, Major Plum, General Azure, Doctor Black and Sir Gray at various times. People were coming and going all evening. I was confused when I heard about what happened. A note? I have no idea what you're talking about. I didn't write anything, and nobody gave me any note either.",
+      "timestamp": "Interview conducted at 5:54am"
+    },
+    {
+      "guest": "Major Plum",
+      "statement": "At that time, I was in the cellar. I often go there in the evenings for writing letters. It's become quite a routine for me. There were a few others around. I saw Miss Onyx, Madame Crimson, Mister Coral, Professor Mustard, General Azure, Madame Amber and Colonel Coral. We didn't really interact much. I was quite shocked when I heard about what happened. As for that note you mentioned, I know nothing about it. I didn't write any note, and I certainly didn't receive one.",
+      "timestamp": "Interview conducted at 2:56am"
+    }
+  ],
+  "solution": {
+    "murderer": "?",
+    "red_herring": "?",
+    "murder_location": "cellar"
+  }
+}
